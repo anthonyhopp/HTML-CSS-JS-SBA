@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('./fonts/Noto_Sans/NotoSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto/Roboto-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2 {
+    color: blue;
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+p {
+    color: darkorange;
+    font-family: 'NotoSans-Regular', sans-serif;
+}
+
+#main-title {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+#home {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+#about-us {
+    text-align: center;
+    height: 100%;
+}
+
+#about-us-text {
+    text-align: center;
+}
+
+#image-section {
+    margin-top: 30px;
+}
+
+#image-container-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#services-title {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+#services-body,
+#services-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#serviceList li {
+    display: inline;
+    margin-right: 10px;
+}

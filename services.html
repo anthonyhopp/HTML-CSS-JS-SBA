@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+</head>
+
+<body>
+
+
+
+    <div id="services-text">
+        <h1>Services</h1>
+        <p>Swanky Doggie Den is a luxury dog boutique offering various high-quality products and services to pamper your
+            furry friends. Our grooming services include bath and brush, haircut, nail trimming, and ear cleaning,
+            starting
+            at $30. We provide training programs, pet sitting, and dog walking services, ranging from $50 to $150 per
+            session and starting at $20 per walk or $50 per day, respectively. Our doggie daycare offers supervised
+            playtime
+            for your dog starting at $35 per day.<br><br> Use the drop down menu to select and add the services you
+            would like
+            to use.</p>
+        <a href="contact_us.html"><b>Contact us to learn more about our services and pricing.</b></a><br><br><br><br>
+    </div>
+    <h2>Order Form</h2>
+    <form>
+        <label for="services">Select a service:</label>
+        <select id="services">
+            <option value="Nothing">--Select one at a time--</option>
+            <option value="Grooming Services">Grooming Services</option>
+            <option value="Training Services">Training Services</option>
+            <option value="Pet Sitting Services">Pet Sitting Services</option>
+            <option value="Dog Walking Services">Dog Walking Services</option>
+            <option value="Doggie Daycare">Doggie Daycare</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="addService()">Select</button>
+        <button type="button" onclick="clearServices()">Clear Selections</button>
+        <button type="button" onclick="showSelection()">Finalize</button>
+
+    </form>
+    <br>
+    <h2>Selected Services:</h2>
+    <span id="serviceList">
+    </span>
+
+    <script>
+        function addService() {
+            var service = document.getElementById("services").value;
+            var list = document.getElementById("serviceList");
+            var entry = document.createElement("li");
+            entry.appendChild(document.createTextNode(service));
+            list.appendChild(entry);
+        }
+        function clearServices() {
+            var list = document.getElementById("serviceList");
+            while (list.firstChild) {
+                list.removeChild(list.firstChild);
+            }
+        }
+        function showSelection() {
+            var list = document.getElementById("serviceList");
+            var services = [];
+            for (var i = 0; i < list.children.length; i++) {
+                var service = list.children[i].textContent;
+                services.push(service);
+            }
+            var message = "You have selected: " + services.join(", ");
+            alert(message);
+            clearServices();
+        }
+
+
+    </script>
+    <br><br><br><br>
+    <img src="https://media.giphy.com/media/2C96PCzkBTomMS2X3N/giphy.gif" alt="Dogs">
+    <nav id="home">
+        <a href="swanky-doggie-den.html">Home</a>
+    </nav>
+</body>
+
+</html>
