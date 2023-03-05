@@ -14,3 +14,6 @@ Contact Us Page
 The Contact Us Page provides an easy way for users to get in touch with our company. The page features a form that requires users to input their name, email, and type of inquiry in a drop-down menu. Additionally, there is a message text area where users can submit messages to the company.
 
 Thank you for visiting Swanky Doggie Den's website. We hope you find everything you need to take care of your furry friend. If you have any questions or comments, please feel free to contact us.
+
+***NOTE***
+Download the entire repository as a .zip in order for all images/fonts to work.
