@@ -2,11 +2,14 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./dogs.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
 </head>
 
 <body style="display: flex; flex-direction: column; align-items: center;">
@@ -14,45 +17,50 @@
     <h2>Contact Us</h2>
   </header>
   <div style="display: flex; flex-direction: column; align-items: center;"></div>
-    <form action="#" method="post" onsubmit="submitForm(event)">
+  <form action="#" method="post" onsubmit="submitForm(event)">
 
-        <div>
-          <label for="name"><b>Name</b></label>
-          <input type="text" id="name" name="name" placeholder="Your name.." required>
-        </div><br>
-        <div>
-          <label for="email"><b>Email</b></label>
-          <input type="email" id="email" name="email" placeholder="Your email.." required>
-        </div><br>
-        <div>
-          <label for="subject"><b>Subject</b></label>
-          <select id="subject" name="subject">
-            <option value="general">General Inquiry</option>
-            <option value="appointment">Appointment Inquiry</option>
-            <option value="billing">Pricing Inquiry</option>
-          </select>
-        </div><br>
-        <div>
-          <label for="message"><b>Type your message below</b></label><br>
-          <textarea id="message" name="message" placeholder="Let us know how we can help.." style="height:200px" required></textarea>
-        </div>
-        <br>
-        <input type="submit" value="Submit">
-      </form>
-      <script>
-        function submitForm(event) {
-          event.preventDefault(); 
-          alert("Thanks for your message!");
-          document.getElementById("name").value = ""; 
-          document.getElementById("email").value = ""; 
-          document.getElementById("subject").value = "general"; 
-          document.getElementById("message").value = ""; 
-        }
-        </script>
-        
-    <nav id="home">
-        <a href="swanky-doggie-den.html">Home</a>
-    </nav>
+    <div>
+      <label for="name"><b>Name</b></label>
+      <input type="text" id="name" name="name" placeholder="Your name.." required>
+    </div><br>
+    <div>
+      <label for="email"><b>Email</b></label>
+      <input type="email" id="email" name="email" placeholder="Your email.." required>
+    </div><br>
+    <div>
+      <label for="subject"><b>Subject</b></label>
+      <select id="subject" name="subject">
+        <option value="general">General Inquiry</option>
+        <option value="appointment">Appointment Inquiry</option>
+        <option value="billing">Pricing Inquiry</option>
+      </select>
+    </div><br>
+    <div>
+      <label for="message"><b>Type your message below</b></label><br>
+      <textarea id="message" name="message" placeholder="Let us know how we can help.." style="height:200px"
+        required></textarea>
+    </div>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      alert("Thanks for your message!");
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("subject").value = "general";
+      document.getElementById("message").value = "";
+    }
+  </script>
+  <div id="animation-container"></div>
+  </div>
+
+
+
+  <nav id="home">
+    <a href="swanky-doggie-den.html">Home</a>
+  </nav>
 </body>
 
 </html>
